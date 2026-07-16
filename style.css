@@ -1,207 +1,254 @@
+/* =========================
+   Nature World Pro - Part 1
+========================= */
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
 html{
-    scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 body{
-    background:#f4fff4;
-    color:#222;
+background:#eef8ef;
+color:#222;
+overflow-x:hidden;
 }
 
-header{
-    background:#2e8b57;
-    position:sticky;
-    top:0;
-    width:100%;
-    z-index:1000;
+a{
+text-decoration:none;
 }
 
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 8%;
+ul{
+list-style:none;
 }
 
-nav h1{
-    color:white;
-    font-size:28px;
+/* Navbar */
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:rgba(0,0,0,.25);
+backdrop-filter:blur(12px);
+z-index:1000;
+transition:.4s;
 }
 
-nav ul{
-    display:flex;
-    list-style:none;
+.navbar.scrolled{
+background:#0f5132;
+box-shadow:0 5px 15px rgba(0,0,0,.25);
 }
 
-nav ul li{
-    margin-left:20px;
+.logo{
+font-size:32px;
+font-weight:700;
+color:#fff;
 }
 
-nav ul li a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-    transition:0.3s;
+.navbar ul{
+display:flex;
+gap:35px;
 }
 
-nav ul li a:hover{
-    color:#c7ffd8;
+.navbar ul li a{
+color:#fff;
+font-size:17px;
+font-weight:500;
+transition:.3s;
 }
+
+.navbar ul li a:hover{
+color:#90ee90;
+}
+
+/* Hero */
 
 .hero{
-    height:100vh;
-    background:url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1600") center/cover no-repeat;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    color:white;
+position:relative;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+overflow:hidden;
 }
 
-.hero-text{
-    background:rgba(0,0,0,0.5);
-    padding:40px;
-    border-radius:15px;
+.background-video{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-2;
 }
 
-.hero h2{
-    font-size:55px;
-    margin-bottom:15px;
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.45);
+z-index:-1;
 }
 
-.hero p{
-    font-size:20px;
-    margin-bottom:25px;
+.hero-content{
+max-width:900px;
+padding:20px;
+color:white;
+}
+
+.hero-content h1{
+font-size:70px;
+margin-bottom:20px;
+}
+
+.hero-content p{
+font-size:22px;
+line-height:1.8;
+margin-bottom:35px;
 }
 
 .btn{
-    background:#2e8b57;
-    color:white;
-    text-decoration:none;
-    padding:12px 25px;
-    border-radius:30px;
-    transition:0.3s;
+display:inline-block;
+padding:15px 40px;
+background:#2ecc71;
+color:white;
+border-radius:40px;
+font-size:18px;
+font-weight:600;
+transition:.3s;
 }
 
 .btn:hover{
-    background:#1d5e3d;
+background:#27ae60;
+transform:translateY(-4px);
 }
+/* =========================
+   About Section
+========================= */
 
 .about{
-    padding:80px 10%;
-    text-align:center;
+padding:100px 10%;
+text-align:center;
+background:white;
 }
 
 .about h2{
-    font-size:40px;
-    color:#2e8b57;
-    margin-bottom:20px;
+font-size:48px;
+color:#0f5132;
+margin-bottom:25px;
 }
 
 .about p{
-    font-size:18px;
-    line-height:1.8;
+max-width:900px;
+margin:auto;
+font-size:19px;
+line-height:1.9;
+color:#555;
 }
 
+/* =========================
+   Gallery
+========================= */
+
 .gallery{
-    padding:80px 10%;
-    background:#ecffee;
+padding:100px 8%;
+background:#eef8ef;
 }
 
 .gallery h2{
-    text-align:center;
-    font-size:40px;
-    color:#2e8b57;
-    margin-bottom:40px;
+text-align:center;
+font-size:48px;
+color:#0f5132;
+margin-bottom:50px;
 }
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:35px;
 }
 
 .card{
-    background:white;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,0.15);
-    transition:0.3s;
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.12);
+transition:.4s;
 }
 
 .card:hover{
-    transform:translateY(-10px);
+transform:translateY(-12px);
+box-shadow:0 20px 40px rgba(0,0,0,.2);
 }
 
 .card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
+width:100%;
+height:240px;
+object-fit:cover;
+transition:.5s;
+}
+
+.card:hover img{
+transform:scale(1.08);
 }
 
 .card h3{
-    color:#2e8b57;
-    padding:15px;
+padding:20px;
+font-size:24px;
+color:#0f5132;
 }
 
 .card p{
-    padding:0 15px 20px;
+padding:0 20px 25px;
+color:#666;
+line-height:1.7;
+font-size:16px;
 }
+/* =========================
+   Quote Section
+========================= */
 
 .quote{
-    background:#2e8b57;
-    color:white;
-    text-align:center;
-    padding:70px 10%;
+padding:100px 10%;
+background:linear-gradient(135deg,#14532d,#22c55e);
+color:white;
+text-align:center;
 }
 
 .quote h2{
-    font-size:32px;
-    margin-bottom:15px;
+font-size:42px;
+margin-bottom:20px;
+line-height:1.5;
 }
+
+.quote p{
+font-size:20px;
+opacity:.9;
+}
+
+/* =========================
+   Footer
+========================= */
 
 footer{
-    background:#111;
-    color:white;
-    text-align:center;
-    padding:25px;
+background:#0b1f14;
+color:white;
+text-align:center;
+padding:50px 20px;
 }
 
-@media(max-width:768px){
-
-nav{
-    flex-direction:column;
-}
-
-nav ul{
-    margin-top:15px;
-}
-
-nav ul li{
-    margin:0 10px;
-}
-
-.hero h2{
-    font-size:38px;
-}
-
-.hero p{
-    font-size:17px;
-}
-
-.about h2,
-.gallery h2{
-    font-size:32px;
-}
-
-.quote h2{
-    font-size:24px;
-}
-
-}
+footer h2{
+font-size:32px;
+margin-bottom
