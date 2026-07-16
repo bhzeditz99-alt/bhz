@@ -1,38 +1,38 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        const target = document.querySelector(this.getAttribute('href'));
-
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
+// Smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
     });
+  });
 });
 
-// Fade-in animation for cards
-const cards = document.querySelectorAll('.card');
+// Navbar shadow on scroll
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('.navbar');
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-        }
-    });
+  if (window.scrollY > 50) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
 });
 
-cards.forEach(card => {
-    card.style.opacity = "0";
-    card.style.transform = "translateY(40px)";
-    card.style.transition = "0.8s";
-    observer.observe(card);
+// Fade-in animation
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+document.querySelectorAll('.card, section').forEach(item => {
+  observer.observe(item);
 });
 
 // Welcome message
-window.addEventListener("load", () => {
-    console.log("Welcome to Nature World!");
-});
+window.onload = function () {
+  console.log("Welcome to Nature World 🌿");
+};
