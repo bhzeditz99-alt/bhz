@@ -3,75 +3,289 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nature World</title>
+<title>Nature World Pro</title>
+  
 <link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
 
 <header>
-<nav>
-<h1>🌿 Nature World</h1>
+
+<nav class="navbar">
+
+<div class="logo">
+🌿 Nature World
+</div>
+
 <ul>
+
 <li><a href="#home">Home</a></li>
+
 <li><a href="#about">About</a></li>
+
 <li><a href="#gallery">Gallery</a></li>
+
+<li><a href="#wildlife">Wildlife</a></li>
+
 <li><a href="#contact">Contact</a></li>
+
 </ul>
+
 </nav>
+
 </header>
 
 <section class="hero" id="home">
-<div class="hero-text">
-<h2>Protect Nature</h2>
-<p>Nature gives us life. Let's protect forests, rivers, wildlife, and our planet.</p>
-<a href="#about" class="btn">Learn More</a>
-</div>
-</section>
 
-<section id="about" class="about">
-<h2>About Nature</h2>
+<video autoplay muted loop playsinline class="background-video">
+
+<source src="https://cdn.coverr.co/videos/coverr-aerial-view-of-a-waterfall-1564052534477?download=1080p.mp4" type="video/mp4">
+
+</video>
+
+<div class="overlay"></div>
+
+<div class="hero-content">
+
+<h1>Explore The Beauty Of Nature</h1>
+
 <p>
-Nature includes forests, mountains, rivers, oceans, plants, animals,
-and everything around us. It provides fresh air, clean water,
-food, and beauty.
+Discover forests, waterfalls, mountains,
+rivers, wildlife and the amazing beauty
+of our planet.
 </p>
+
+<a href="#gallery" class="btn">
+Explore Gallery
+</a>
+
+</div>
+
 </section>
 
-<section id="gallery" class="gallery">
+<section class="about" id="about">
+
+<h2>About Nature</h2>
+
+<p>
+
+Nature is the greatest gift on Earth.
+
+It provides clean air, fresh water,
+food, medicine and beautiful landscapes.
+
+Every tree, river, mountain and animal
+plays an important role in keeping our
+planet healthy.
+
+</p>
+
+</section>
+
+<section class="gallery" id="gallery">
+
 <h2>Nature Gallery</h2>
 
-<div class="cards">
-
-<div class="card">
+<div class="gallery-grid">
+  <div class="card">
 <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800" alt="Forest">
-<h3>Forest</h3>
-<p>Forests are the lungs of our Earth.</p>
+<h3>Green Forest</h3>
+<p>Beautiful green forests full of life.</p>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800" alt="Mountain">
-<h3>Mountain</h3>
-<p>Mountains provide fresh water and amazing scenery.</p>
+<h3>Majestic Mountains</h3>
+<p>Snow-covered mountains touching the sky.</p>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800" alt="River">
-<h3>River</h3>
-<p>Rivers are the lifelines of nature.</p>
+<h3>Crystal River</h3>
+<p>Fresh rivers flowing through nature.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1470770903676-69b98201ea1c?w=800" alt="Waterfall">
+<h3>Waterfall</h3>
+<p>Powerful waterfalls surrounded by forests.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800" alt="Sunrise">
+<h3>Golden Sunrise</h3>
+<p>Experience peaceful mornings in nature.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=800" alt="Flowers">
+<h3>Wild Flowers</h3>
+<p>Colorful flowers blooming across fields.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=800" alt="Lake">
+<h3>Blue Lake</h3>
+<p>Clear lakes reflecting the beauty of nature.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=800" alt="Trees">
+<h3>Ancient Trees</h3>
+<p>Huge trees that have stood for centuries.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=800" alt="Valley">
+<h3>Green Valley</h3>
+<p>Beautiful valleys full of greenery.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800" alt="Ocean">
+<h3>Ocean View</h3>
+<p>Blue oceans meeting the endless horizon.</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=800" alt="Forest Path">
+<h3>Forest Path</h3>
+<p>A peaceful path through the forest.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800" alt="Mountains">
+<h3>Mountain Peak</h3>
+<p>Reach the highest peaks and enjoy the view.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?w=800" alt="Waterfall">
+<h3>Hidden Waterfall</h3>
+<p>A beautiful waterfall deep in the forest.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1473773508845-188df298d2d1?w=800" alt="Sunset">
+<h3>Nature Sunset</h3>
+<p>Golden skies over the mountains.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1511497584788-876760111969?w=800" alt="Bird">
+<h3>Colorful Bird</h3>
+<p>Wild birds make forests full of life.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1470115636492-6d2b56f9146d?w=800" alt="Trees">
+<h3>Green Trees</h3>
+<p>Trees give us oxygen and shelter.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800" alt="River">
+<h3>Mountain River</h3>
+<p>Crystal-clear rivers flowing through valleys.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800" alt="Hills">
+<h3>Rolling Hills</h3>
+<p>Beautiful green hills under blue skies.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=800" alt="Forest">
+<h3>Deep Forest</h3>
+<p>Explore untouched forests and wildlife.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=800" alt="Nature">
+<h3>Nature Beauty</h3>
+<p>Protect nature for future generations.</p>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?w=800" alt="Elephant">
+<h3>Wild Elephant</h3>
+<p>Elephants are one of the largest land animals.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=800" alt="Tiger">
+<h3>Royal Tiger</h3>
+<p>The tiger is a symbol of strength and courage.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=800" alt="Deer">
+<h3>Peaceful Deer</h3>
+<p>Deer live in forests and grasslands.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=800" alt="Bird">
+<h3>Beautiful Bird</h3>
+<p>Birds fill nature with beautiful songs.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1444464666168-49d633b86797?w=800" alt="Butterfly">
+<h3>Butterfly</h3>
+<p>Butterflies make gardens colorful.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1429087969512-1e85aab2683d?w=800" alt="Waterfall">
+<h3>Amazing Waterfall</h3>
+<p>Nature's beauty is endless.</p>
 </div>
 
 </div>
+
+</section>
+
+<section id="wildlife" class="about">
+
+<h2>Protect Wildlife</h2>
+
+<p>
+Wildlife is an important part of nature.
+Every animal helps maintain the balance
+of our ecosystem. Together, we can protect
+our forests, rivers and wildlife for the
+future generations.
+</p>
+
 </section>
 
 <section class="quote">
-<h2>"Look deep into nature, and then you will understand everything better."</h2>
-<p>- Albert Einstein</p>
+
+<h2>
+"Take only memories, leave only footprints."
+</h2>
+
+<p>Protect Nature • Save Earth 🌍</p>
+
 </section>
 
 <footer id="contact">
-<h3>Nature World</h3>
-<p>Made with ❤️ for Nature</p>
-<p>© 2026 Nature World</p>
+
+<h2>Nature World</h2>
+
+<p>Email : nature@example.com</p>
+
+<p>Made with ❤️ for Nature Lovers</p>
+
+<p>© 2026 Nature World. All Rights Reserved.</p>
+
 </footer>
 
 <script src="script.js"></script>
